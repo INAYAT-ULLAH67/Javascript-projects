@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/output.css">
+    <title>clock-display</title>
+</head>
+<body style="margin: 0; padding: 0; " class="h-full bg-slate-700">
+
+    <div class="flex flex-row  clock-display font-bold justify-center items-center p-4 bg-white m-70 rounded-2xl h-40  w-2xl ">
+        <p>Your local time</p> 
+        <div class="clock mx-5 h-20 self-center bg-amber-200 w-70 rounded-2xl p-7">
+            
+
+        </div>
+
+    </div>
+    <script>
+        const clock = document.querySelector('.clock')
+        setInterval(function(){
+            let date= new Date()
+            clock.innerHTML=date.toLocaleTimeString();
+
+        },1000)
+    </script>
+    
+</body>
+</html>
